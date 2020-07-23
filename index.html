@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sampler</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+</head>
+
+<body>
+    <div class="load">
+        <div class="h-33 w-100 d-flex flex-column justify-content-center align-items-center">
+            <small class="color-secundary">ELIGE UN COLOR:</small>
+            <div class="d-flex mt-2">
+                <div id="color1" class="color mx-2 d-none"><span class="span-color1"></span><span></span><span class="span-color3"></span></div>
+                <div id="color2" class="color mx-2"><span class="span-color1"></span><span></span><span class="span-color3"></span></div>
+                <div id="color3" class="color mx-2"><span class="span-color1"></span><span></span><span class="span-color3"></span></div>
+                <div id="color4" class="color mx-2"><span class="span-color1"></span><span></span><span class="span-color3"></span></div>
+            </div>
+        </div>
+        <div class="h-43 w-100 d-flex justify-content-center align-items-center relative">
+            <img src="img/gif-load.gif" alt="" class="h-90">
+            <div class="title">
+                <h1>PIXEL LOFI<span>PIXEL LOFI</span></h1>
+                <h1>HIP-HOP <span>HIP-HOP</span></h1>
+            </div>
+        </div>
+        <div id="start" class="h-23 w-100 d-flex justify-content-center align-items-center">
+            <p>¡EMPEZAR!</p>
+        </div>
+        <div class="transition transition1"></div>
+        <div class="transition transition2"></div>
+        <div class="credits flex-column justify-content-center align-items-center">
+            <small class="p-credits">DISEÑO Y DESARROLLO - ENRIC RAMÍREZ</small>
+            <small class="p-credits">COMPOSITOR - MATÍAS CUBILLOS</small>
+        </div>
+    </div>
+    <nav class="menu">
+        <div class="menu__item-general">
+            <div data-posicio="0" class="menu__item">
+                <a class="menu__item-inner">BASE I</a>
+                <audio id="audio0" nocontrols src="audio/percusion-1.wav" class="so"></audio>
+            </div>
+        </div>
+        <div class="menu__item-general">
+            <div data-posicio="1" class="menu__item">
+                <a class="menu__item-inner">BASE II</a>
+                <audio id="audio1" nocontrols src="audio/percusion-2.wav" class="so"></audio>
+            </div>
+        </div>
+        <div class="menu__item-general">
+            <div data-posicio="2" class="menu__item">
+                <a class="menu__item-inner">BASE III</a>
+                <audio id="audio2" nocontrols src="audio/percusion-3.wav" class="so"></audio>
+            </div>
+        </div>
+        <div class="menu__item-general">
+            <div data-posicio="3" class="menu__item">
+                <a class="menu__item-inner">GUITARRA I</a>
+                <audio id="audio3" nocontrols src="audio/guitarra-1.wav" class="so"></audio>
+            </div>
+        </div>
+        <div class="menu__item-general">
+            <div data-posicio="4" class="menu__item">
+                <a class="menu__item-inner">GUITARRA II</a>
+                <audio id="audio4" nocontrols src="audio/guitarra-2.wav" class="so"></audio>
+            </div>
+        </div>
+        <div class="menu__item-general">
+            <div data-posicio="5" class="menu__item">
+                <a class="menu__item-inner">GUITARRA III</a>
+                <audio id="audio5" nocontrols src="audio/guitarra-3.wav" class="so"></audio>
+            </div>
+        </div>
+        <div class="menu__item-general">
+            <div data-posicio="6" class="menu__item">
+                <a class="menu__item-inner">BAJO I</a>
+                <audio id="audio6" nocontrols src="audio/bajo-1.wav" class="so"></audio>
+            </div>
+        </div>
+        <div class="menu__item-general">
+            <div data-posicio="7" class="menu__item">
+                <a class="menu__item-inner">PIANO I</a>
+                <audio id="audio7" nocontrols src="audio/piano-1.wav" class="so"></audio>
+            </div>
+        </div>
+        <div class="menu__item-general">
+            <div data-posicio="8" class="menu__item">
+                <a class="menu__item-inner">AMBIENTE I</a>
+                <audio id="audio8" nocontrols src="audio/ambiente-1.wav" class="so"></audio>
+            </div>
+        </div>
+        <div class="menu__item-general">
+            <div data-posicio="9" class="menu__item">
+                <a class="menu__item-inner">AMBIENTE II</a>
+                <audio id="audio9" nocontrols src="audio/thunders.wav" class="so"></audio>
+            </div>
+        </div>
+        <div class="menu__item-general">
+            <div data-posicio="10" class="menu__item">
+                <a class="menu__item-inner">AMBIENTE III</a>
+                <audio id="audio10" nocontrols src="audio/viniloFX.wav" class="so"></audio>
+            </div>
+        </div>
+    </nav>
+
+    <div class="videos-fixed">
+        <video id="img0" class="img" autoplay loop nocontrols>
+            <source src="videos/video-5.mp4" type="video/mp4">
+        </video>
+        <video id="img1" class="img" autoplay loop nocontrols>
+            <source src="videos/video-5.mp4" type="video/mp4">
+        </video>
+        <video id="img2" class="img" autoplay loop nocontrols>
+            <source src="videos/video-5.mp4" type="video/mp4">
+        </video>
+        <video id="img3" class="img" autoplay loop nocontrols>
+            <source src="videos/video-6.mp4" type="video/mp4">
+        </video>
+        <video id="img4" class="img" autoplay loop nocontrols>
+            <source src="videos/video-6.mp4" type="video/mp4">
+        </video>
+        <video id="img5" class="img" autoplay loop nocontrols>
+            <source src="videos/video-6.mp4" type="video/mp4">
+        </video>
+        <video id="img6" class="img" autoplay loop nocontrols>
+            <source src="videos/video-1.mp4" type="video/mp4">
+        </video>
+        <video id="img7" class="img" autoplay loop nocontrols>
+            <source src="videos/video-9.mp4" type="video/mp4">
+        </video>
+        <video id="img8" class="img" autoplay loop nocontrols>
+            <source src="videos/video-7.mp4" type="video/mp4">
+        </video>
+        <video id="img9" class="img" autoplay loop nocontrols>
+            <source src="videos/video-7.mp4" type="video/mp4">
+        </video>
+        <video id="img10" class="img" autoplay loop nocontrols>
+            <source src="videos/video-7.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <div id="tempo"></div>
+    <img src="img/arrow-1.svg" alt="retroceder" id="arrow">
+    <img src="img/cursor-1.png" class="cursor">
+
+    <script src="js/scroll-infinite.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
